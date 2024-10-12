@@ -325,6 +325,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b87da43fc33124a40ba070c4a8b5b8d6, type: 3}
+--- !u!114 &843620292 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5023304835670848311, guid: b87da43fc33124a40ba070c4a8b5b8d6, type: 3}
+  m_PrefabInstance: {fileID: 843620291}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1697a64bb9c76124fb1f0193d3705b45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1159208946 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2108135146752884725, guid: 4c27a86f1c336c2468b92d80b924e253, type: 3}
@@ -573,11 +584,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3002923225222873631, guid: 4c27a86f1c336c2468b92d80b924e253, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -19.19
+      value: -22.66
       objectReference: {fileID: 0}
     - target: {fileID: 3002923225222873631, guid: 4c27a86f1c336c2468b92d80b924e253, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.84
+      value: -2.16
       objectReference: {fileID: 0}
     - target: {fileID: 3002923225222873631, guid: 4c27a86f1c336c2468b92d80b924e253, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -595,6 +606,10 @@ PrefabInstance:
       propertyPath: m_Pitch
       value: 1.38
       objectReference: {fileID: 0}
+    - target: {fileID: 7369767159332299778, guid: 4c27a86f1c336c2468b92d80b924e253, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 843620292}
     - target: {fileID: 7369767159332299778, guid: 4c27a86f1c336c2468b92d80b924e253, type: 3}
       propertyPath: nextLevel
       value: Win
@@ -641,11 +656,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3099172174932074340, guid: dc643889402a26840b42e15654e8dcb8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 3099172174932074340, guid: dc643889402a26840b42e15654e8dcb8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 3099172174932074340, guid: dc643889402a26840b42e15654e8dcb8, type: 3}
       propertyPath: m_LocalPosition.x

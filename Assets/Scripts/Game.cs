@@ -10,6 +10,8 @@ public class Game : MonoBehaviour
     public string nextLevel;
     public static bool isLoading = false;
 
+    public Timer timer;
+
     void Start()
     {
         isLoading = false;
@@ -30,6 +32,7 @@ public class Game : MonoBehaviour
         if (isLoading) return;
         isLoading = true;
 
+        if (timer != null) timer.storeTime();
         StartCoroutine(FadeOutAndLoad(nextLevel));
     }
 

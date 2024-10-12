@@ -86,7 +86,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sack: {fileID: 7908049113411360260}
-  nextLevel: Menu
+  nextLevel: Level 5
+  timer: {fileID: 0}
 --- !u!114 &1735077489825017063
 MonoBehaviour:
   m_ObjectHideFlags: 0

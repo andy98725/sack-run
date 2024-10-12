@@ -426,6 +426,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b87da43fc33124a40ba070c4a8b5b8d6, type: 3}
+--- !u!114 &1853269469 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5023304835670848311, guid: b87da43fc33124a40ba070c4a8b5b8d6, type: 3}
+  m_PrefabInstance: {fileID: 1853269468}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1697a64bb9c76124fb1f0193d3705b45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4961181736837612812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -518,6 +529,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7369767159332299778, guid: 4c27a86f1c336c2468b92d80b924e253, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 1853269469}
     - target: {fileID: 7369767159332299778, guid: 4c27a86f1c336c2468b92d80b924e253, type: 3}
       propertyPath: nextLevel
       value: Level 2
