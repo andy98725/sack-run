@@ -624,7 +624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7369767159332299778, guid: 4c27a86f1c336c2468b92d80b924e253, type: 3}
       propertyPath: nextLevel
-      value: Geom Dash
+      value: Firefly
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

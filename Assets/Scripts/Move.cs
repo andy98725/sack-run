@@ -50,7 +50,7 @@ public class Move : MonoBehaviour
 
         if (!isGrounded)
         {
-            force = new Vector2(force.x * 0.7f, force.y * 0.2f);
+            force = new Vector2(force.x * 0.5f, force.y * 0.2f);
         }
         else
         {

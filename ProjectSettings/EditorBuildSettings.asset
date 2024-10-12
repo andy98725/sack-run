@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Geom Dash.unity
     guid: a7fe15bc165e192468509b7fd5d79072
+  - enabled: 1
+    path: Assets/Scenes/Firefly.unity
+    guid: c4348414d33b39447a9476dc1865a154
+  - enabled: 1
+    path: Assets/Scenes/Custom.unity
+    guid: 5fc53a9a482937e44af2c829e50c2945
   m_configObjects: {}
