@@ -21,7 +21,13 @@ public class Game : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-            Application.Quit();
+            UnityEngine.SceneManagement.SceneManager.LoadScene("menu");
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            string curLevel = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+            StartCoroutine(FadeOutAndLoad(curLevel));
+        }
 
         if (Input.GetKeyDown(KeyCode.F5))
             Screen.fullScreen = !Screen.fullScreen;

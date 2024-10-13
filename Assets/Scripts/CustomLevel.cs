@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using FrostweepGames.Plugins.WebGLFileBrowser;
+using System.Linq;
+using System.Threading.Tasks;
 
 public class CustomLevel : MonoBehaviour
 {
@@ -55,8 +57,6 @@ public class CustomLevel : MonoBehaviour
     static Color startingColor = new Color(0.48f, 0.27f, 0.11f);
     private void ParseSprite(Sprite sprite)
     {
-        // TODO set level, bad, good, startingLoc
-
         Texture2D baseTex = sprite.texture;
         Color[] pixels = baseTex.GetPixels();
         int width = baseTex.width;
@@ -87,15 +87,11 @@ public class CustomLevel : MonoBehaviour
             for (int x = 0; x < width; x++)
             {
                 Color pixel = pixels[y * width + x];
-                if (ColorDistance(pixel, levelColor) < 0.2f)
-                {
-                    levelTex.SetPixel(x, y, pixel);
-                }
-                else if (ColorDistance(pixel, badColor) < 0.2f)
+                if (ColorDistance(pixel, badColor) < 0.25f)
                 {
                     badTex.SetPixel(x, y, pixel);
                 }
-                else if (ColorDistance(pixel, goodColor) < 0.2f)
+                else if (ColorDistance(pixel, goodColor) < 0.25f)
                 {
                     goodTex.SetPixel(x, y, pixel);
                 }
@@ -104,7 +100,13 @@ public class CustomLevel : MonoBehaviour
                     startingLoc = new Vector2(x, y) / 100;
                     startingThreshold = ColorDistance(pixel, startingColor);
                 }
+                else if (ColorDistance(pixel, levelColor) < 0.25f)
+                {
+                    levelTex.SetPixel(x, y, pixel);
+                }
             }
+
+
 
         levelTex.Apply();
         goodTex.Apply();
@@ -126,7 +128,7 @@ public class CustomLevel : MonoBehaviour
     private void Load(Transform target, Sprite sprite)
     {
         if (target == null) return;
-        if (sprite == null)
+        if (sprite == null || IsTextureFullyTransparent(sprite.texture))
         {
             Destroy(target.gameObject);
             return;
@@ -136,5 +138,11 @@ public class CustomLevel : MonoBehaviour
         Destroy(target.GetComponent<PolygonCollider2D>());
         target.gameObject.AddComponent<PolygonCollider2D>();
 
+    }
+
+    private bool IsTextureFullyTransparent(Texture2D texture)
+    {
+        Color[] pixels = texture.GetPixels();
+        return pixels.All(pixel => pixel == Color.clear);
     }
 }

@@ -50,7 +50,7 @@ public class Move : MonoBehaviour
 
         if (!isGrounded)
         {
-            force = new Vector2(force.x * 0.5f, force.y * 0.2f);
+            force = new Vector2(force.x * 0.4f, force.y * 0.2f);
         }
         else
         {
@@ -74,8 +74,9 @@ public class Move : MonoBehaviour
                 int contactCount = collision.GetContacts(contactPoints);
                 for (int i = 0; i < contactCount; i++)
                 {
-                    if (Vector2.Dot(contactPoints[i].normal, Vector2.up) > 0.5f)
+                    if (Vector2.Dot(contactPoints[i].normal, Vector2.up) > 0.1f)
                     {
+                        Debug.Log("ground");
                         groundTime = 0.2f;
                         return;
                     }
